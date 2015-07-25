@@ -112,7 +112,7 @@ module.exports = function(grunt){
 
             var output_type = 'created', output = null;
             if (grunt.file.exists(output_filepath)) {
-              output_type = 'overwrited';
+              output_type = 'overwritten';
               output = grunt.file.read(output_filepath);
             }
             // avoid write if there is no change
@@ -121,11 +121,11 @@ module.exports = function(grunt){
               grunt.file.write(output_filepath, html);
 
               // Report build
-              grunt.log.writeln('✓ Styleguide ' + output_type + ' at: ' + grunt.log.wordlist([output_dir], {color: 'cyan'}));
+              grunt.log.writeln('✓ Style Guide ' + output_type + ' at: ' + grunt.log.wordlist([output_dir], {color: 'cyan'}));
             }
             else {
               // no change
-              grunt.log.writeln('‣ Styleguide unchanged');
+              grunt.log.writeln('‣ Style Guide unchanged');
             }
 
             // Return promise
